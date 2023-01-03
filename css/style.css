@@ -1,0 +1,548 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Martian+Mono:wght@200;400;700&display=swap");
+
+/* body  font-family: 'Cabin', sans-serif;
+titles   font-family: 'Martian Mono', monospace; */
+
+/* --------------------variables----------------------------- */
+
+:root {
+    --white: #fff;
+    --gray: rgb(188, 184, 184);
+    --colorFondo: hsl(335, 52%, 37%);
+    --colorRed: hsl(338, 85%, 46%);
+    --colorYellow: hsl(39, 100%, 63%);
+    --colorYellowlight: hsl(39, 100%, 90%);
+    --colorGreen: hsl(178, 60%, 32%);
+    --colorDarkGreen: hsl(178, 60%, 20%);
+    --colorGreenRgba: rgba(33, 131, 127, 0.5);
+    --colorDarkGreenRgba: rgba(20, 82, 80, 0.7);
+    --colorLightBlue: hsl(187, 62%, 66%);
+}
+
+/* ----------------- Resets and general styles ---------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    font-family: "Cabin", sans-serif;
+    margin: 0px auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Martian Mono", monospace;
+}
+
+a {
+    text-decoration: none;
+}
+
+header,
+main,
+footer,
+nav,
+section,
+section article,
+header div,
+footer div,
+.mainHistory section div,
+#mainGames,
+#mainGames div,
+.puzzle div,
+#videoBack,
+#videoControls,
+#videoControls > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -----------------------animaciones---------------------------- */
+
+@keyframes animacionH2 {
+    0% {
+        color: var(--colorYellow);
+        padding-left: 0px;
+    }
+
+    50% {
+        color: var(--colorGreen);
+        padding-left: 80%;
+    }
+
+    100% {
+        color: var(--colorLightBlue);
+        padding-left: 0px;
+    }
+}
+
+@keyframes moving {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(-100vw);
+    }
+}
+
+/* -----------------------------header----------------------------- */
+
+header {
+    flex-direction: column;
+}
+
+/* -------nav---------- */
+
+nav {
+    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--colorYellow);
+    padding: 0px 50px;
+}
+
+nav button,
+main section article button,
+#reiniciar,
+#videoBack button {
+    width: 150px;
+    height: 50px;
+    margin: 0px 20px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    background-color: var(--colorGreen);
+    box-shadow: 6px 6px 15px var(--colorYellowlight);
+    cursor: pointer;
+}
+nav button {
+    flex-wrap: wrap;
+}
+
+nav button a,
+main section article button a {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 2px;
+}
+
+/* ----div header---- */
+
+header > div {
+    width: 100%;
+    height: 60vh;
+    background-image: url(../assets/img/codigo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header div h1 {
+    text-transform: uppercase;
+    font-size: min(3vw + 1.5rem);
+    color: var(--colorYellow);
+    text-shadow: 0px 0px 15px var(--colorFondo);
+    text-align: center;
+}
+
+/* --------------------------main----------------------------------- */
+
+main {
+    height: auto;
+    min-height: 100vh;
+    background-color: var(--colorFondo);
+    flex-direction: column;
+}
+
+main h2 {
+    font-size: min(2vw + 1rem);
+    width: 100%;
+    margin-bottom: 10%;
+    color: var(--colorGreen);
+    animation: animacionH2 20s linear infinite;
+}
+
+main section {
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+main section article {
+    background-color: var(--colorYellow);
+    width: 25%;
+    min-width: 300px;
+    height: 25vw;
+    min-height: 300px;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    border: 10px double var(--colorRed);
+}
+
+main section article img {
+    width: 90%;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px var(--colorFondo), -1px -1px 5px var(--colorFondo),
+        5px 5px 20px var(--colorYellowlight),
+        -5px -5px 20px var(--colorYellowlight);
+}
+
+main section article button {
+    margin-bottom: 20px;
+    background-color: var(--colorFondo);
+    box-shadow: none;
+}
+
+main section article button a {
+    text-transform: initial;
+}
+
+/* --------------------------footer----------------------------------- */
+
+footer {
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    padding: 30px 30px;
+    background-image: linear-gradient(
+        var(--colorGreenRgba),
+        var(--colorDarkGreenRgba)
+    );
+}
+
+footer div {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    width: 400px;
+    text-align: center;
+    padding: 2%;
+}
+
+footer h3 {
+    width: 40%;
+}
+
+footer img {
+    width: 100px;
+}
+
+/* ----------------------------PAGINA HISTORIA------------------------ */
+
+.mainHistory section div {
+    margin: 40px;
+}
+
+.mainHistory h3 {
+    color: var(--colorYellow);
+    width: 50vw;
+    text-align: center;
+    font-size: min(1vw + 1rem);
+    padding: 3vw;
+}
+
+.mainHistory .h3size {
+    width: 30vw;
+}
+
+.mainHistory .p3size {
+    width: 70vw;
+}
+
+.mainHistory p {
+    color: var(--gray);
+    width: 50vw;
+    padding: 3vw;
+}
+
+.sectionVideo {
+    width: 100%;
+    flex-direction: column;
+    margin: 10vh;
+}
+
+#video {
+    width: 100%;
+    height: auto;
+}
+
+.sectionVideo h3 {
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+#videoBack {
+    width: 50vw;
+    background-color: var(--colorDarkGreen);
+    flex-direction: column;
+}
+
+#videoControls {
+    width: 100%;
+    flex-direction: column;
+}
+
+#videoControls {
+    flex-wrap: wrap;
+}
+
+#videoBack button {
+    background-color: var(--colorYellow);
+    width: 35%;
+    min-width: 60px;
+    margin: 10px;
+}
+
+#videoControls > div {
+    height: auto;
+    width: auto;
+    min-width: 80%;
+    flex-wrap: wrap;
+}
+
+#videoControls p {
+    text-align: center;
+}
+
+/* ----------------------------PAGINA JUEGO------------------------ */
+
+#mainGames .divOverflow {
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainGames h2 {
+    color: var(--colorYellow);
+    font-size: min(1vw + 0.7rem);
+    animation: moving 15s linear infinite;
+}
+
+#mainGames > div {
+    align-items: flex-start;
+    width: 100%;
+    height: 60vh;
+}
+
+#mainGames > div div {
+    width: 15%;
+    min-width: 200px;
+    background-image: linear-gradient(
+        var(--colorLightBlue),
+        var(--colorGreen),
+        var(--colorDarkGreen),
+        var(--colorGreen),
+        var(--colorDarkGreen),
+        var(--colorLightBlue)
+    );
+    text-align: center;
+    height: 500px;
+    margin: 3px;
+    color: var(--colorYellow);
+    font-size: min(0.5vw + 0.7rem);
+}
+
+#mainGames > div img {
+    height: 500px;
+    width: 100%;
+}
+
+#reiniciar {
+    font-size: min(0.5vw + 0.5rem);
+    color: var(--colorYellow);
+    margin-bottom: 50px;
+    width: 25%;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+/* -----------------------------------medias queries---------------------------------------- */
+
+/* -----------------------------------900 px---------------------------------------- */
+
+@media (max-width: 900px) {
+    /* TEMPLATE */
+
+    body {
+        display: grid;
+        grid-template-areas:
+            "nav header header "
+            "nav  main main"
+            "nav  footer footer";
+        grid-template-columns: 100px 1fr 1fr;
+        grid-template-rows: 40vh auto 20vh;
+    }
+
+    #divNav {
+        grid-area: nav;
+    }
+    header {
+        grid-area: header;
+        width: 100%;
+    }
+    main {
+        grid-area: main;
+        width: 100%;
+    }
+    footer {
+        grid-area: footer;
+    }
+
+    /* ---------------------nav-------------------------------- */
+    main h2 {
+        animation: none;
+        text-align: center;
+        color: var(--colorYellowlight);
+    }
+
+    nav {
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-around;
+        position: sticky;
+        top: 0;
+        left: 0;
+    }
+
+    nav button {
+        width: 30px;
+        height: auto;
+        word-wrap: break-word;
+        text-align: center;
+    }
+
+    nav > div {
+        height: 20%;
+    }
+
+    nav .navButtons {
+        height: 70%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    nav button a {
+        font-size: 1.5rem;
+    }
+
+    /* -----------------------------main----------------------------- */
+
+    .mainHistory div {
+        width: 80vw;
+    }
+
+    #mainGames .divOverflow {
+        margin: 0;
+        padding: 0;
+        height: 25vh;
+    }
+
+    #mainGames .divOverflow h2 {
+        padding: 0px;
+    }
+}
+
+/* -----------------------------------500 px---------------------------------------- */
+
+@media (max-width: 500px) {
+    body {
+        position: relative;
+        height: auto;
+        grid-template-areas:
+            " header "
+            "  main "
+            " footer "
+            "nav";
+        grid-template-columns: 100%;
+        grid-template-rows: 20vh auto auto auto;
+    }
+
+    .displayNone {
+        display: none;
+    }
+
+    header h1 {
+        height: auto;
+        font-size: 5px;
+    }
+
+    #divNav {
+        position: relative;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        z-index: 3;
+    }
+
+    #nav {
+        align-items: center;
+        height: 150px;
+        z-index: 3;
+    }
+
+    nav button {
+        width: 60vw;
+        height: 50px;
+        word-wrap: none;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .mainHistory section div {
+        width: 100vw;
+        display: grid;
+        grid-template-areas:
+            "h3"
+            "p";
+    }
+    h3 {
+        grid-area: h3;
+    }
+    p {
+        grid-area: p;
+    }
+
+    footer {
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 25vh;
+    }
+
+    .mainHistory section div h3,
+    .mainHistory section div p,
+    .mainHistory section div .h3size,
+    .mainHistory section div .p3size,
+    footer div h3 {
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+    }
+
+    #videoBack {
+        width: 100%;
+        margin: 0;
+    }
+
+    footer {
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 25vh;
+    }
+
+    footer div {
+        margin: 0px;
+        width: 100%;
+        flex-direction: column;
+    }
+}
