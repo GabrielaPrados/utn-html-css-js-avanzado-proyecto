@@ -12,12 +12,18 @@
             <nav id="nav">
                 <div id="logo">
                     <a href="index.html" alt="link a pagina de inicio">
-                        <svg width="300px" height="250" >
-                            <rect x="90" y="55" width="120px" height="80px" rx="10px"  fill="hsl(178, 60%, 20%)"> </rect>
-                            <rect x="100" y="65" width="100px" height="60px" rx="10px"  fill="hsl(39, 100%, 90%)"> </rect>
-                            <polygon points="100 150, 200 150, 230 200, 70 200" fill="hsl(178, 60%, 20%)"> </polygon> 
-                            <polygon points="110 160, 190 160, 210 190, 90 190" fill="hsl(39, 100%, 90%)"> </polygon> 
-                       </svg>
+                        <svg width="300px" height="250">
+                            <rect x="90" y="55" width="120px" height="80px" rx="10px" fill="hsl(178, 60%, 20%)">
+                                <animate attributeType="XML" attributeName="y" from="-100" to="55" dur="1s"  ></animate>
+                            </rect>
+                            <rect x="100" y="65" width="100px" height="60px" rx="10px" fill="hsl(39, 100%, 90%)">
+                            <animate attributeType="XML" attributeName="y" from="-100" to="65" dur="2s"></animate>
+                            </rect>
+                            <polygon points="100 150, 200 150, 230 200, 70 200" fill="hsl(178, 60%, 20%)" class="verde">
+                            </polygon>
+                            <polygon points="110 160, 190 160, 210 190, 90 190" fill="hsl(39, 100%, 90%)" class="amarillo">
+                            </polygon>
+                        </svg>
                     </a>
                 </div>
                 <div  class="navButtons">

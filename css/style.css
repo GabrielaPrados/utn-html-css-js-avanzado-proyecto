@@ -551,3 +551,26 @@ footer img {
         flex-direction: column;
     }
 }
+
+
+/* -------------------------ANIMACIONES SVG------------------------------------------------------------ */
+
+@keyframes aparecer{
+        0% {
+            transform: translateX(-250px);
+        }
+        100% {
+            transform: translateX(0px);
+        }
+    
+}
+
+svg .verde{
+    animation: aparecer 1s
+}
+
+svg .amarillo{
+    animation: aparecer 2.5s 
+}
+
+
