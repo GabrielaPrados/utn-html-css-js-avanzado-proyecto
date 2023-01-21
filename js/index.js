@@ -19,3 +19,4 @@ document.addEventListener("click", (e) => {
         video.pause()
     }
 })
+

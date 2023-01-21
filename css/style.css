@@ -58,7 +58,8 @@ footer div,
 .puzzle div,
 #videoBack,
 #videoControls,
-#videoControls > div {
+#videoControls > div 
+nav .navButtons{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,25 +109,33 @@ nav {
     padding: 0px 50px;
 }
 
-nav button,
-main section article button,
+nav .navButtons{
+    flex-wrap: nowrap;
+}
+nav a,
+main section article a{
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+}
+
+nav a,
+main section article a,
 #reiniciar,
 #videoBack button {
     width: 150px;
     height: 50px;
-    margin: 0px 20px;
+    margin: 20px;
     border-radius: 15px;
     text-transform: uppercase;
     background-color: var(--colorGreen);
     box-shadow: 6px 6px 15px var(--colorYellowlight);
     cursor: pointer;
 }
-nav button {
-    flex-wrap: wrap;
-}
 
-nav button a,
-main section article button a {
+
+nav a,
+main section article a {
     font-size: 1rem;
     font-weight: 700;
     color: var(--white);
@@ -195,15 +204,14 @@ main section article img {
         -5px -5px 20px var(--colorYellowlight);
 }
 
-main section article button {
+main section article a{
     margin-bottom: 20px;
     background-color: var(--colorFondo);
     box-shadow: none;
-}
-
-main section article button a {
     text-transform: initial;
 }
+
+
 
 /* --------------------------footer----------------------------------- */
 
@@ -298,7 +306,7 @@ footer img {
 #videoBack button {
     background-color: var(--colorYellow);
     width: 35%;
-    min-width: 60px;
+    min-width: 150px;
     margin: 10px;
 }
 
@@ -366,6 +374,10 @@ footer img {
     font-weight: bold;
 }
 
+
+#logo a{
+    display: inline;
+}
 /* -----------------------------------medias queries---------------------------------------- */
 
 /* -----------------------------------900 px---------------------------------------- */
@@ -414,11 +426,15 @@ footer img {
         left: 0;
     }
 
-    nav button {
+    nav a {
+        padding: 10px;
+        padding-right: 20px;
         width: 30px;
         height: auto;
         word-wrap: break-word;
         text-align: center;
+        font-size: 1rem;
+        line-height: 30px;
     }
 
     nav > div {
@@ -432,9 +448,6 @@ footer img {
         flex-direction: column;
     }
 
-    nav button a {
-        font-size: 1.5rem;
-    }
 
     #logo{
         display: none;
@@ -496,7 +509,7 @@ footer img {
         z-index: 3;
     }
 
-    nav button {
+    nav a {
         width: 60vw;
         height: 50px;
         word-wrap: none;
@@ -518,12 +531,7 @@ footer img {
         grid-area: p;
     }
 
-    footer {
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 25vh;
-    }
-
+   
     .mainHistory section div h3,
     .mainHistory section div p,
     .mainHistory section div .h3size,
