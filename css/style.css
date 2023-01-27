@@ -342,9 +342,10 @@ footer img {
     height: 60vh;
 }
 
-#mainGames > div div {
+#mainGames > div div,
+#mainGames   img {
     width: 15%;
-    min-width: 200px;
+    min-width: 250px;
     background-image: linear-gradient(
         var(--colorLightBlue),
         var(--colorGreen),
@@ -354,16 +355,16 @@ footer img {
         var(--colorLightBlue)
     );
     text-align: center;
-    height: 500px;
+    height: 600px;
     margin: 3px;
     color: var(--colorYellow);
     font-size: min(0.5vw + 0.7rem);
 }
 
-#mainGames > div img {
-    height: 500px;
-    width: 100%;
+#mainGames .puzzleImages{
+    height: auto;
 }
+
 
 #reiniciar {
     font-size: min(0.5vw + 0.5rem);
