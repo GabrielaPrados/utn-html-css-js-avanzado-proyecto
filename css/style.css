@@ -392,7 +392,7 @@ footer img {
             "nav header header "
             "nav  main main"
             "nav  footer footer";
-        grid-template-columns: 100px 1fr 1fr;
+        grid-template-columns: 120px 1fr 1fr;
         grid-template-rows: 40vh auto 20vh;
     }
 
@@ -449,11 +449,6 @@ footer img {
         flex-direction: column;
     }
 
-
-    #logo{
-        display: none;
-    }
-
     /* -----------------------------main----------------------------- */
 
     .mainHistory div {
@@ -468,6 +463,9 @@ footer img {
 
     #mainGames .divOverflow h2 {
         padding: 0px;
+    }
+    #logo{
+        display: none;
     }
 }
 
@@ -552,6 +550,7 @@ footer img {
         justify-content: center;
         align-items: center;
         padding-bottom: 25vh;
+        margin-bottom: 15vh;
     }
 
     footer div {
@@ -559,7 +558,11 @@ footer img {
         width: 100%;
         flex-direction: column;
     }
+
+
 }
+
+
 
 
 /* -------------------------ANIMACIONES SVG------------------------------------------------------------ */
@@ -583,3 +586,10 @@ svg .amarillo{
 }
 
 
+/* -------------------------------------------------------a logo-------------------------------------------------- */
+
+#aLogo{
+    background-color: none;
+    color : none;
+
+}
