@@ -593,3 +593,12 @@ svg .amarillo{
     color : none;
 
 }
+
+/* ------------------------------------------------clases js------------------------------------------------- */
+
+.modificarDiv{
+    margin: 0;
+    padding: 0;
+    background-image: none;
+    background-color: none;
+}

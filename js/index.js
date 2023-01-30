@@ -20,14 +20,12 @@ document.addEventListener("click", (e) => {
     }
 });
 
-
-
 /* FUNCIONES DRAG AND DROP */
 const comienzaDrag = (e) => {
     const img = e.target.src;
-    
+
     if (img[0] == "h") {
-         let newURL = img.slice(0, 21)
+        let newURL = img.slice(0, 21)
         let srcImg = img.replace(newURL, "..");
         e.dataTransfer.setData("text", srcImg);
         console.log(srcImg)
@@ -49,7 +47,9 @@ const preventDefault = (e) => {
 const dropImg = (e) => {
     const destino = e.target
     let nuevaImagen = e.dataTransfer.getData("text");
-    destino.innerHTML = `<img src= "${nuevaImagen}">`;
+    destino.innerHTML = `<img src= "${nuevaImagen}" style = "width:100% ; margin: 0px" >`;
+    destino.style.backgroundImage = "none"
+    destino.style.margin = "0px"
 };
 
 for (let i = 0; i < imgs.length; i++) {
