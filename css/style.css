@@ -58,8 +58,7 @@ footer div,
 .puzzle div,
 #videoBack,
 #videoControls,
-#videoControls > div 
-nav .navButtons{
+#videoControls > div nav .navButtons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,11 +108,11 @@ nav {
     padding: 0px 50px;
 }
 
-nav .navButtons{
+nav .navButtons {
     flex-wrap: nowrap;
 }
 nav a,
-main section article a{
+main section article a {
     display: inline-block;
     text-align: center;
     line-height: 50px;
@@ -132,7 +131,6 @@ main section article a,
     box-shadow: 6px 6px 15px var(--colorYellowlight);
     cursor: pointer;
 }
-
 
 nav a,
 main section article a {
@@ -204,14 +202,12 @@ main section article img {
         -5px -5px 20px var(--colorYellowlight);
 }
 
-main section article a{
+main section article a {
     margin-bottom: 20px;
     background-color: var(--colorFondo);
     box-shadow: none;
     text-transform: initial;
 }
-
-
 
 /* --------------------------footer----------------------------------- */
 
@@ -343,7 +339,7 @@ footer img {
 }
 
 #mainGames > div div,
-#mainGames   img {
+#mainGames img {
     width: 15%;
     min-width: 250px;
     background-image: linear-gradient(
@@ -361,10 +357,9 @@ footer img {
     font-size: min(0.5vw + 0.7rem);
 }
 
-#mainGames .puzzleImages{
+#mainGames .puzzleImages {
     height: auto;
 }
-
 
 #reiniciar {
     font-size: min(0.5vw + 0.5rem);
@@ -375,8 +370,7 @@ footer img {
     font-weight: bold;
 }
 
-
-#logo a{
+#logo a {
     display: inline;
 }
 /* -----------------------------------medias queries---------------------------------------- */
@@ -464,7 +458,7 @@ footer img {
     #mainGames .divOverflow h2 {
         padding: 0px;
     }
-    #logo{
+    #logo {
         display: none;
     }
 }
@@ -530,7 +524,6 @@ footer img {
         grid-area: p;
     }
 
-   
     .mainHistory section div h3,
     .mainHistory section div p,
     .mainHistory section div .h3size,
@@ -558,47 +551,30 @@ footer img {
         width: 100%;
         flex-direction: column;
     }
-
-
 }
-
-
-
 
 /* -------------------------ANIMACIONES SVG------------------------------------------------------------ */
 
-@keyframes aparecer{
-        0% {
-            transform: translateX(-250px);
-        }
-        100% {
-            transform: translateX(0px);
-        }
-    
+@keyframes aparecer {
+    0% {
+        transform: translateX(-250px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
 }
 
-svg .verde{
-    animation: aparecer 1s
+svg .verde {
+    animation: aparecer 1s;
 }
 
-svg .amarillo{
-    animation: aparecer 2.5s 
+svg .amarillo {
+    animation: aparecer 2.5s;
 }
-
 
 /* -------------------------------------------------------a logo-------------------------------------------------- */
 
-#aLogo{
+#aLogo {
     background-color: none;
-    color : none;
-
-}
-
-/* ------------------------------------------------clases js------------------------------------------------- */
-
-.modificarDiv{
-    margin: 0;
-    padding: 0;
-    background-image: none;
-    background-color: none;
+    color: none;
 }
